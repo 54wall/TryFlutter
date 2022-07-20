@@ -35,11 +35,10 @@ class HeadingItem implements ListItem {
   @override
   Widget buildSubtitle(BuildContext context) {
     // TODO: implement buildSubtitle
-    return Text(heading,
-      style: Theme
-          .of(context)
-          .textTheme
-          .headline5,);
+    return Text(
+      heading,
+      style: Theme.of(context).textTheme.headline5,
+    );
   }
 
   @override
@@ -47,13 +46,14 @@ class HeadingItem implements ListItem {
     // TODO: implement buildTitle
     return const SizedBox.shrink();
   }
-
 }
 
-class MessageItem implements ListItem{
+class MessageItem implements ListItem {
   String sender;
   String body;
-  MessageItem(this.sender,this.body);
+
+  MessageItem(this.sender, this.body);
+
   @override
   Widget buildSubtitle(BuildContext context) {
     // TODO: implement buildSubtitle
@@ -65,5 +65,4 @@ class MessageItem implements ListItem{
     // TODO: implement buildTitle
     return Text(body);
   }
-
 }
